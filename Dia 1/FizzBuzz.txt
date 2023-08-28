@@ -1,0 +1,16 @@
+int main (){
+
+    for in (i = 1; i <= count)
+           
+          if (i % 3 == 0) 
+               count << "Fizz,"; 
+
+          else if (i % 5 == 0)
+               count << "buzz,";
+          else if (i % 15 == 0) 
+               count << "FizzBuzz,";
+          else
+               count << i << ","; 
+    
+              return:EXIT_SUCCES
+          
