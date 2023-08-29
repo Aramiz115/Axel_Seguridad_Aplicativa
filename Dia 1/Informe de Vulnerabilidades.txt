@@ -1,0 +1,39 @@
+El Equipo Alfa Buena Maravilla Onda Dinamita Escuadron Lobo (EABMODEL)
+
+Conformado por los Integrantes: Salomon, Jesus y Aramis.
+
+Durante nuestro ataque al sitio https://juice-shop.com/ hemos encontrado las siguientes vulnerabilidades:
+
+1-En la seccion de el primer producto se encontro el correo del administrador, posteriormente nos dirijimos a el apartado de login y ejecutamos un SQL inyection en el campo de correo electronico, ingresamos el correo el admin seguido de la sentencia ' or 1=1--+ y agregamos un valor cualquiera en el apartado de contraseña.
+
+solucion consultas parametrisadas.
+
+
+2- Session ID in URL Rewrite: sobre escritura de la url es usada para localizar el id de sesion de usuaro
+
+se soluciona poniendo las seciones de ID en una cookie y si se quiere ser mas seguro hacer una combinacio de cookie y url reescribible.
+
+3- ataque de fuerza mediante la herramienta dirb, obtuvimos las robots.
+
+solucion, solicitar a los usuarios contraseñas mas robustas.
+
+
+4- visualizacion de archivos importantes FTP 
+
+Mantener el software del servidor FTPS o SFTP actualizado
+No utilizar la versión de software SFTP predeterminada que se muestra la primera vez que inicia sesión, ya que le dará a los hackers una pista sobre cómo explotar el servidor.
+Mantener las bases de datos back-end en un servidor diferente
+
+
+5- xcrossite se ingresa codigo de HTML desde el buscador. <iframe src= "javascript:alert(´xss´)>
+
+Validacion de token y envio doble de cookies.
+
+
+6 - Mala configuracion por parte del servidor
+
+Al momento de escribir https://juice-shop.herokuapp.com/rest/admin/application-configuration sale informacion del sitio en formato jsonb, esto se debe a un cors (Cross origin resourse sharing) esto se puede evitar si nos aseguramos que los datos sencibles no estan disponibles de una forma no autenticada, configurar access control allow origin.
+
+
+debido a la gran cantidad de vulnerabilidades presentes, es necesario que se tomen las medidas adecuadas para mitigar las vulnerabilidades encontradas
+
