@@ -1,0 +1,4 @@
+string = "oso" 
+
+if (string==string[::-1]):print ("es palindromo")
+else:print ("No es palindromo") 
