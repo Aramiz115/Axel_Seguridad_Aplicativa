@@ -1,0 +1,43 @@
+list={
+
+"juan":8,
+"Giselle":9,
+"Damian":5,
+"Ricardo":6,
+"Yaotzin":6,
+"Erick":7,
+"Mario":8,
+"Edgar":9,
+"Fernanda":5,
+"Daniel":6,
+"Jesus":7,
+"Damian":8,
+"Yemahina":6,
+"Eduardo":9,
+"Bryan":9,
+"Mariano":10,
+"Alberto":8
+}
+
+def promedio ():
+    suma=0 
+    for alumno in list: 
+        suma=list[alumno]+suma
+    prom=suma/len(list)
+    print(prom)
+
+def mayor ():
+    for alumno in list:
+        if (list[alumno]==10): 
+            print(alumno)
+        
+        
+def menor ():
+    for alumno in list:
+        if(list[alumno]==5):
+            print(alumno)
+
+
+menor()
+promedio()
+mayor()
