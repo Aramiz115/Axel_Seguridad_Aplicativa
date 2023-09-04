@@ -1,0 +1,5 @@
+sudo adduser $1
+nano agregar.sh
+chmod +x agregar.sh
+./agregar.sh Aramis
+cat /etc/passwd
